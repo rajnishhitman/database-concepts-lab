@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: database-concepts-lab
+  datasource:
+    url: jdbc:postgresql://localhost:5433/concepts_lab
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          batch_size: 100
+  sql:
+    init:
+      mode: never
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+server:
+  port: 8080
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.orm.jdbc.bind: trace
+
+
+#  liquibase:
+#    change-log: classpath:db/changelog/db.changelog-master.yaml

@@ -1,0 +1,11 @@
+#databaseChangeLog:
+#  - changeSet:
+#      id: 1
+#      author: developer
+#      changes:
+#        - createIndex:
+#            indexName: idx_customers_city
+#            tableName: customers
+#            columns:
+#              - column:
+#                  name: city

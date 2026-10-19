@@ -1,0 +1,18 @@
+# Merge these properties into application.yml; activate profile `sharding`.
+spring:
+  datasource:
+    shard0:
+      jdbc-url: jdbc:postgresql://localhost:5433/concepts_lab_shard_0
+      username: postgres
+      password: password
+      driver-class-name: org.postgresql.Driver
+    shard1:
+      jdbc-url: jdbc:postgresql://localhost:5433/concepts_lab_shard_1
+      username: postgres
+      password: password
+      driver-class-name: org.postgresql.Driver
+    shard2:
+      jdbc-url: jdbc:postgresql://localhost:5433/concepts_lab_shard_2
+      username: postgres
+      password: password
+      driver-class-name: org.postgresql.Driver
